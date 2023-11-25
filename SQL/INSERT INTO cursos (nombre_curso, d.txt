@@ -1,0 +1,37 @@
+INSERT INTO cursos (nombre_curso, descripcion_curso, horario) 
+VALUES ('Matemáticas', 'Álgebra y Cálculo', 'Lunes y miercoles, 9:00AM - 11:00AM'),
+('Historia', 'Historia del arte', 'Martes y jueves, 10:00AM - 12:00Pm');
+SELECT * FROM cursos;
+ 
+-- Insertar docentes
+ 
+INSERT INTO docentes (nombre, apellido, fecha_nacimiento, genero, direccion)
+VALUES ('Juan', 'Peréz', '1980-04-12','M', 'Calle 01, Bogotá'),
+('María', 'Rodriguez', '1975-11-29', 'F', 'Avenida 02, Bogotá');
+SELECT * FROM docentes;
+ 
+-- Insertar registros en la tabla de rompimiento cursos_docentes
+ 
+INSERT INTO cursos_docentes (cursoID, docenteID) 
+VALUES (2, 1),
+(2,1);
+SELECT * FROM cursos_docentes;
+ 
+-- Insertar estudiantes
+INSERT INTO estudiantes (nombre, apellido, fecha_nacimiento, genero, direccion, cursoID)
+VALUES ('Ana', 'Peréz', '1999-05-15', 'F', 'Calle 123, Bogota', 1),
+('Luis', 'Gómez', '2000-02-20', 'M', 'Avenida 14, Bogotá', '2');
+SELECT * FROM estudiantes;
+ 
+-- documentos docentes y estudiantes
+-- documentos docentes
+INSERT INTO documentos (tipo, numero, docenteID) 
+VALUES ('CC', '111222333', '1'),
+('CC', '222333444', '2');
+ 
+-- documentos estudiantes
+INSERT INTO documentos (tipo, numero, estudianteID)
+VALUES ('TI', '123456789', 1),
+('TI', '234567890', 2);
+ 
+SELECT * FROM documentos;

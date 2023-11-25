@@ -1,0 +1,36 @@
+COLEGIO
+
+
+table estudiante {
+  estudianteID int [pk,increment]
+  nombre varchar (100)
+  apellido varchar (100)
+  fecha_nacimiento date
+  genero char (1)
+  direccion varchar (100)
+  cusoID int  
+}
+table docentes{
+  docenteID int [pk,increment]
+  nombre varchar (100)
+  apellido varchar (100)
+  fecha_nacimiento date
+  genero char (1)
+  direccion varchar (100)
+}
+
+table cursos {
+  cursoID [pk,increment]
+  nombre_curso varchar (100)
+  descripcion_curso varchar (100)
+  horario varchar (100)
+}
+table documentos{
+  tipo char (2) [pk]
+  numero int [pk]
+}
+table cursos_docente{
+  cursoID int [pk]
+  docenteID int [pk]
+  
+}
